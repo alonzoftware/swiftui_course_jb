@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  05-buttons-lon
+//  buttons-lon
 //
 //  Created by Rene Alonzo Choque Saire on 13/2/22.
 //
@@ -69,7 +69,8 @@ struct ContentView: View {
                 }
             }
             .buttonStyle(BasicButtonStyle())
-            
+            .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
+                     
             Button(action: {
                 print("Eliminar pulsado")
             }){
@@ -81,7 +82,7 @@ struct ContentView: View {
                 }
             }
             .buttonStyle(BasicButtonStyle())
-            
+            .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
             Button(action: {
                 print("Compartir pulsado")
             }){
@@ -93,6 +94,7 @@ struct ContentView: View {
                 }
             }
         .buttonStyle(BasicButtonStyle())
+        .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
          
         Spacer()
         }.padding()
