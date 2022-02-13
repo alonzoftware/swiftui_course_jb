@@ -11,7 +11,9 @@ import SwiftUI
 struct states_bindings_lonApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+//            HomeworkCounterView()
+            ClickView()
         }
     }
 }

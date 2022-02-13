@@ -11,6 +11,8 @@
 		9A231EF327B9A1D300C98B9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A231EF227B9A1D300C98B9B /* ContentView.swift */; };
 		9A231EF527B9A1D600C98B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A231EF427B9A1D600C98B9B /* Assets.xcassets */; };
 		9A231EF827B9A1D600C98B9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A231EF727B9A1D600C98B9B /* Preview Assets.xcassets */; };
+		9A231EFF27B9AE0A00C98B9B /* HomeworkCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A231EFE27B9AE0900C98B9B /* HomeworkCounterView.swift */; };
+		9A231F0127B9B2B700C98B9B /* ClickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A231F0027B9B2B700C98B9B /* ClickView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		9A231EF227B9A1D300C98B9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9A231EF427B9A1D600C98B9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A231EF727B9A1D600C98B9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9A231EFE27B9AE0900C98B9B /* HomeworkCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkCounterView.swift; sourceTree = "<group>"; };
+		9A231F0027B9B2B700C98B9B /* ClickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				9A231EF227B9A1D300C98B9B /* ContentView.swift */,
 				9A231EF427B9A1D600C98B9B /* Assets.xcassets */,
 				9A231EF627B9A1D600C98B9B /* Preview Content */,
+				9A231EFE27B9AE0900C98B9B /* HomeworkCounterView.swift */,
+				9A231F0027B9B2B700C98B9B /* ClickView.swift */,
 			);
 			path = "states_bindings-lon";
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			files = (
 				9A231EF327B9A1D300C98B9B /* ContentView.swift in Sources */,
 				9A231EF127B9A1D300C98B9B /* states_bindings_lonApp.swift in Sources */,
+				9A231EFF27B9AE0A00C98B9B /* HomeworkCounterView.swift in Sources */,
+				9A231F0127B9B2B700C98B9B /* ClickView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
