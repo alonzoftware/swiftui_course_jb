@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  04-ScrollCardView-lon
+//  ScrollCardView-lon
 //
 //  Created by Rene Alonzo Choque Saire on 13/2/22.
 //
@@ -108,6 +108,7 @@ struct ContentView: View {
         }//VStack
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

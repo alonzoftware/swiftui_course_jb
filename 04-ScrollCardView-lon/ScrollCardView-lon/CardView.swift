@@ -1,8 +1,8 @@
 //
 //  CardView.swift
-//  04-ScrollCardView-lon
+//  ScrollCardView
 //
-//  Created by Rene Alonzo Choque Saire on 13/2/22.
+//  Created by Rene Alonzo Choque Saire on 30/1/22.
 //
 
 import SwiftUI
