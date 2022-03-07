@@ -11,8 +11,9 @@ import SwiftUI
 struct draw_lonApp: App {
     var body: some Scene {
         WindowGroup {
-            CurveView()
+//            CurveView()
 //            ContentView()
+            PieView()
         }
     }
 }

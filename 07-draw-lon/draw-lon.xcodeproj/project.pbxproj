@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A02AF7B27BAD40400592A08 /* PieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A02AF7A27BAD40400592A08 /* PieView.swift */; };
-		9A02AF7D27BADF0300592A08 /* CurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A02AF7C27BADF0300592A08 /* CurveView.swift */; };
+		9A1AC41D27D58B5E008808A7 /* PieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AC41C27D58B5E008808A7 /* PieView.swift */; };
+		9A2293CC27CFBB5900C19432 /* CurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2293CB27CFBB5900C19432 /* CurveView.swift */; };
 		9AD41F2D27BAC1AE0090318A /* draw_lonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD41F2C27BAC1AE0090318A /* draw_lonApp.swift */; };
 		9AD41F2F27BAC1AE0090318A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD41F2E27BAC1AE0090318A /* ContentView.swift */; };
 		9AD41F3127BAC1AF0090318A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD41F3027BAC1AF0090318A /* Assets.xcassets */; };
@@ -16,8 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9A02AF7A27BAD40400592A08 /* PieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieView.swift; sourceTree = "<group>"; };
-		9A02AF7C27BADF0300592A08 /* CurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveView.swift; sourceTree = "<group>"; };
+		9A1AC41C27D58B5E008808A7 /* PieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieView.swift; sourceTree = "<group>"; };
+		9A2293CB27CFBB5900C19432 /* CurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveView.swift; sourceTree = "<group>"; };
 		9AD41F2927BAC1AE0090318A /* draw-lon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "draw-lon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD41F2C27BAC1AE0090318A /* draw_lonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = draw_lonApp.swift; sourceTree = "<group>"; };
 		9AD41F2E27BAC1AE0090318A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,12 +55,12 @@
 		9AD41F2B27BAC1AE0090318A /* draw-lon */ = {
 			isa = PBXGroup;
 			children = (
-				9A02AF7A27BAD40400592A08 /* PieView.swift */,
 				9AD41F2C27BAC1AE0090318A /* draw_lonApp.swift */,
 				9AD41F2E27BAC1AE0090318A /* ContentView.swift */,
 				9AD41F3027BAC1AF0090318A /* Assets.xcassets */,
 				9AD41F3227BAC1AF0090318A /* Preview Content */,
-				9A02AF7C27BADF0300592A08 /* CurveView.swift */,
+				9A2293CB27CFBB5900C19432 /* CurveView.swift */,
+				9A1AC41C27D58B5E008808A7 /* PieView.swift */,
 			);
 			path = "draw-lon";
 			sourceTree = "<group>";
@@ -143,9 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A02AF7B27BAD40400592A08 /* PieView.swift in Sources */,
+				9A2293CC27CFBB5900C19432 /* CurveView.swift in Sources */,
+				9A1AC41D27D58B5E008808A7 /* PieView.swift in Sources */,
 				9AD41F2F27BAC1AE0090318A /* ContentView.swift in Sources */,
-				9A02AF7D27BADF0300592A08 /* CurveView.swift in Sources */,
 				9AD41F2D27BAC1AE0090318A /* draw_lonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
