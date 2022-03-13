@@ -11,9 +11,11 @@ import SwiftUI
 struct draw_lonApp: App {
     var body: some Scene {
         WindowGroup {
-//            CurveView()
-//            ContentView()
-            PieView()
+            //            CurveView()
+            //            ContentView()
+            //            PieView()
+            //            ProgressIndicator()
+            DougnutView()
         }
     }
 }

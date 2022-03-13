@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9A1AC41D27D58B5E008808A7 /* PieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AC41C27D58B5E008808A7 /* PieView.swift */; };
 		9A2293CC27CFBB5900C19432 /* CurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2293CB27CFBB5900C19432 /* CurveView.swift */; };
+		9AA1C6FD27DEB27F004DE93B /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1C6FC27DEB27F004DE93B /* ProgressIndicator.swift */; };
+		9AA1C6FF27DEB33D004DE93B /* DognutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1C6FE27DEB33D004DE93B /* DognutView.swift */; };
 		9AD41F2D27BAC1AE0090318A /* draw_lonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD41F2C27BAC1AE0090318A /* draw_lonApp.swift */; };
 		9AD41F2F27BAC1AE0090318A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD41F2E27BAC1AE0090318A /* ContentView.swift */; };
 		9AD41F3127BAC1AF0090318A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD41F3027BAC1AF0090318A /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		9A1AC41C27D58B5E008808A7 /* PieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieView.swift; sourceTree = "<group>"; };
 		9A2293CB27CFBB5900C19432 /* CurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveView.swift; sourceTree = "<group>"; };
+		9AA1C6FC27DEB27F004DE93B /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
+		9AA1C6FE27DEB33D004DE93B /* DognutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DognutView.swift; sourceTree = "<group>"; };
 		9AD41F2927BAC1AE0090318A /* draw-lon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "draw-lon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD41F2C27BAC1AE0090318A /* draw_lonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = draw_lonApp.swift; sourceTree = "<group>"; };
 		9AD41F2E27BAC1AE0090318A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 				9AD41F3227BAC1AF0090318A /* Preview Content */,
 				9A2293CB27CFBB5900C19432 /* CurveView.swift */,
 				9A1AC41C27D58B5E008808A7 /* PieView.swift */,
+				9AA1C6FC27DEB27F004DE93B /* ProgressIndicator.swift */,
+				9AA1C6FE27DEB33D004DE93B /* DognutView.swift */,
 			);
 			path = "draw-lon";
 			sourceTree = "<group>";
@@ -146,6 +152,8 @@
 				9A2293CC27CFBB5900C19432 /* CurveView.swift in Sources */,
 				9A1AC41D27D58B5E008808A7 /* PieView.swift in Sources */,
 				9AD41F2F27BAC1AE0090318A /* ContentView.swift in Sources */,
+				9AA1C6FF27DEB33D004DE93B /* DognutView.swift in Sources */,
+				9AA1C6FD27DEB27F004DE93B /* ProgressIndicator.swift in Sources */,
 				9AD41F2D27BAC1AE0090318A /* draw_lonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
