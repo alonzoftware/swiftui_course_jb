@@ -19,24 +19,26 @@ struct ContentView: View {
                 .frame(width: 180, height: 180)
             
                 .foregroundColor(buttonColorChanged ? Color(.systemGray4) : .green)
-                .animation(Animation.default, value: buttonColorChanged)
+//                .animation(Animation.default, value: buttonColorChanged) //Implicit Animation
             
             Image(systemName: "keyboard")
                 .font(.system(size: 80))
             
                 .foregroundColor(iconColorChanged ? .green : Color(.systemGray6))
-                .animation(Animation.default, value: iconColorChanged)
+//                .animation(Animation.default, value: iconColorChanged) //Implicit Animation
             
                 .scaleEffect(iconSizeChanged ? 1.0 : 0.5)
-                .animation(Animation.spring(response: 1, dampingFraction: 0.1, blendDuration: 0.5), value: iconSizeChanged)
-                
+//                .animation(Animation.spring(response: 1, dampingFraction: 0.1, blendDuration: 0.5), value: iconSizeChanged) //Implicit Animation
                 
         }
 //        .animation(Animation.default)
         .onTapGesture {
+//            withAnimation(.default){ //Explicit Animation
+            withAnimation(Animation.spring(response: 1, dampingFraction: 0.1, blendDuration: 0.5)){ //Explicit Animation
+                self.iconSizeChanged.toggle()
+                self.iconColorChanged.toggle()
+            }
             self.buttonColorChanged.toggle()
-            self.iconColorChanged.toggle()
-            self.iconSizeChanged.toggle()
         }
     }
 }
