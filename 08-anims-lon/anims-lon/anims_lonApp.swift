@@ -11,7 +11,8 @@ import SwiftUI
 struct anims_lonApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            LoadingView()
         }
     }
 }

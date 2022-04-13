@@ -29,6 +29,7 @@ struct ContentView: View {
             
                 .scaleEffect(iconSizeChanged ? 1.0 : 0.5)
 //                .animation(Animation.spring(response: 1, dampingFraction: 0.1, blendDuration: 0.5), value: iconSizeChanged) //Implicit Animation
+//                .animation(nil) // Implicit Animation nullable for cancel animation
                 
         }
 //        .animation(Animation.default)

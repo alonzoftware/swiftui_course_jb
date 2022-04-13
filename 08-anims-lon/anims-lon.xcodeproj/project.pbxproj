@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9AB4C4992806CB5800695F4B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4C4982806CB5800695F4B /* LoadingView.swift */; };
 		9AD44F5F27E24D95008223CB /* anims_lonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD44F5E27E24D95008223CB /* anims_lonApp.swift */; };
 		9AD44F6127E24D95008223CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD44F6027E24D95008223CB /* ContentView.swift */; };
 		9AD44F6327E24D99008223CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD44F6227E24D99008223CB /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9AB4C4982806CB5800695F4B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		9AD44F5B27E24D95008223CB /* anims-lon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "anims-lon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD44F5E27E24D95008223CB /* anims_lonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = anims_lonApp.swift; sourceTree = "<group>"; };
 		9AD44F6027E24D95008223CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 				9AD44F6027E24D95008223CB /* ContentView.swift */,
 				9AD44F6227E24D99008223CB /* Assets.xcassets */,
 				9AD44F6427E24D99008223CB /* Preview Content */,
+				9AB4C4982806CB5800695F4B /* LoadingView.swift */,
 			);
 			path = "anims-lon";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				9AD44F6127E24D95008223CB /* ContentView.swift in Sources */,
 				9AD44F5F27E24D95008223CB /* anims_lonApp.swift in Sources */,
+				9AB4C4992806CB5800695F4B /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
