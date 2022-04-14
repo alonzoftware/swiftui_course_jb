@@ -12,7 +12,9 @@ struct anims_lonApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            LoadingView()
+//            LoadingView()
+            MyLoadingBarView()
+//            LoadingBarView()
         }
     }
 }
