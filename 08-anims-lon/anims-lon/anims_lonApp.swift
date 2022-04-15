@@ -13,8 +13,12 @@ struct anims_lonApp: App {
         WindowGroup {
 //            ContentView()
 //            LoadingView()
-            MyLoadingBarView()
+//            MyLoadingBarView()
 //            LoadingBarView()
+//            ProgressView()
+//            MyProgressBarView()
+//            DotsLoadingView()
+            MorphView()
         }
     }
 }

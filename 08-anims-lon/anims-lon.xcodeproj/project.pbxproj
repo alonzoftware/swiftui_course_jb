@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D9DC3C1280A037F00484AB3 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9DC3C0280A037F00484AB3 /* ProgressView.swift */; };
+		4D9DC3C3280A0CD400484AB3 /* MyProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9DC3C2280A0CD400484AB3 /* MyProgressBarView.swift */; };
+		4D9DC3C5280A14FE00484AB3 /* DotsLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9DC3C4280A14FE00484AB3 /* DotsLoadingView.swift */; };
+		4D9DC3C7280A194700484AB3 /* MorphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9DC3C6280A194700484AB3 /* MorphView.swift */; };
 		9A60977E28081CD200017A09 /* MyLoadingBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A60977D28081CD200017A09 /* MyLoadingBarView.swift */; };
 		9A6097802808293D00017A09 /* LoadingBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A60977F2808293D00017A09 /* LoadingBarView.swift */; };
 		9AB4C4992806CB5800695F4B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4C4982806CB5800695F4B /* LoadingView.swift */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D9DC3C0280A037F00484AB3 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		4D9DC3C2280A0CD400484AB3 /* MyProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgressBarView.swift; sourceTree = "<group>"; };
+		4D9DC3C4280A14FE00484AB3 /* DotsLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsLoadingView.swift; sourceTree = "<group>"; };
+		4D9DC3C6280A194700484AB3 /* MorphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorphView.swift; sourceTree = "<group>"; };
 		9A60977D28081CD200017A09 /* MyLoadingBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLoadingBarView.swift; sourceTree = "<group>"; };
 		9A60977F2808293D00017A09 /* LoadingBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingBarView.swift; sourceTree = "<group>"; };
 		9AB4C4982806CB5800695F4B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -64,6 +72,10 @@
 				9AB4C4982806CB5800695F4B /* LoadingView.swift */,
 				9A60977D28081CD200017A09 /* MyLoadingBarView.swift */,
 				9A60977F2808293D00017A09 /* LoadingBarView.swift */,
+				4D9DC3C0280A037F00484AB3 /* ProgressView.swift */,
+				4D9DC3C2280A0CD400484AB3 /* MyProgressBarView.swift */,
+				4D9DC3C4280A14FE00484AB3 /* DotsLoadingView.swift */,
+				4D9DC3C6280A194700484AB3 /* MorphView.swift */,
 			);
 			path = "anims-lon";
 			sourceTree = "<group>";
@@ -148,9 +160,13 @@
 			files = (
 				9AD44F6127E24D95008223CB /* ContentView.swift in Sources */,
 				9A60977E28081CD200017A09 /* MyLoadingBarView.swift in Sources */,
+				4D9DC3C3280A0CD400484AB3 /* MyProgressBarView.swift in Sources */,
+				4D9DC3C5280A14FE00484AB3 /* DotsLoadingView.swift in Sources */,
 				9A6097802808293D00017A09 /* LoadingBarView.swift in Sources */,
+				4D9DC3C7280A194700484AB3 /* MorphView.swift in Sources */,
 				9AD44F5F27E24D95008223CB /* anims_lonApp.swift in Sources */,
 				9AB4C4992806CB5800695F4B /* LoadingView.swift in Sources */,
+				4D9DC3C1280A037F00484AB3 /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
