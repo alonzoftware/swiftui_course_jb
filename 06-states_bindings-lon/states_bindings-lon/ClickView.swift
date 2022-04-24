@@ -34,7 +34,14 @@ struct ClickView_Previews: PreviewProvider {
 
 struct CounterView: View {
     
-    @Binding var numCounter: Int
+    @Binding var numCounter: Int {
+        willSet {
+            print("new Value \(newValue)")
+        }
+        didSet {
+            print("old Value \(oldValue)")
+        }
+    }
     
     var buttonColor: Color
     
