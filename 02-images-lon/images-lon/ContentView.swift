@@ -23,10 +23,16 @@ struct ContentView: View {
 //        }
 //        .padding()
         
-        Image(systemName: "keyboard")
-            .font(.system(size: 100))
-            .foregroundColor(.accentColor)//.foregroundColor(.green)
-            .shadow(color: .gray, radius: 10,x:0,y:10)
+        //Image("lapaz").resizable() //Adjust to Screen with Safe Area
+        Image("lapaz")
+            .resizable()
+            //.edgesIgnoringSafeArea(.top) //Adjust to Screen without Safe Area
+            //.scaledToFit()
+            //.aspectRatio(contentMode: .fit) // The Same of .scaledToFit
+            //.aspectRatio(contentMode: .fill)
+            //.aspectRatio(contentMode: .fit).frame(width: 300) //Scale to Width
+            //.aspectRatio(contentMode: .fill).frame(width: 300).clipped() //Fill and scale to width cutting edges
+            .aspectRatio(contentMode: .fill).frame(width: 300).clipShape(Capsule()) //Fill and scale cliped with Shape,Circle(), Ellipse(), Capsule()
     }
 }
 
