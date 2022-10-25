@@ -66,8 +66,8 @@ struct ContentView: View {
                              , message: "Conviertete en un máster del universo"
                              , nameSFSymbol: "lightbulb")
                     .offset(x: 0, y: 100)
-            }.padding()
-            Spacer()
+            }.padding()//.horizontal,.vertical, .all
+            Spacer() // Expand space like gum sponge
         }
         
         
@@ -120,7 +120,7 @@ struct PricingView: View {
         ZStack {
             VStack{
                 nameSFSymbol.map({
-                    Image(systemName:$0).font(.system(size: 35)).foregroundColor(textColor)
+                    Image(systemName:$0).font(.system(size: 35)).foregroundColor(textColor) //$0 the same variable = nameSFSymbol
                 })
                 
                 //                if !nameSFSymbol.isEmpty {
