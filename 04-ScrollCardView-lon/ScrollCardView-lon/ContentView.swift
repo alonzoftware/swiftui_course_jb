@@ -79,7 +79,7 @@ struct ContentView: View {
                             .frame(width: widthCard)
                         CardView(imageName: "goomba", authorName: "Nintendo", courseTitle: "Goomba History", originalPrice: "199.99 $", discountPrice: "10.99 $")
                             .frame(width: widthCard)
-                        CardView(imageName: "toad", authorName: "Nintendo", courseTitle: "Toad History", originalPrice: "199.99 $", discountPrice: "10.99 $")
+                        CardView(imageName: "toad", authorName: "Nintendo", courseTitle: "Toad History", originalPrice: "199.99 $", discountPrice: "")
                             .frame(width: widthCard)
                         
                     }

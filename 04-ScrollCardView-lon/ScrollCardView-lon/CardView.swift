@@ -35,11 +35,13 @@ struct CardView: View {
                         Text(originalPrice)
                             .font(.subheadline)
                             .foregroundColor(.primary)
+                        if discountPrice != "" {
+                            Text(discountPrice)
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                                .strikethrough()
+                        }
                         
-                        Text(discountPrice)
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                            .strikethrough()
                     }
                 }
                 .layoutPriority(10)
@@ -50,10 +52,10 @@ struct CardView: View {
         
         .cornerRadius(15)
         .overlay(RoundedRectangle(cornerRadius: 15)
-                    .stroke(Color(red: 130/255, green: 130/255, blue: 130/255, opacity: 0.5),lineWidth: 3))
+            .stroke(Color(red: 130/255, green: 130/255, blue: 130/255, opacity: 0.5),lineWidth: 3))
         .padding([.top,.horizontal])
     }
-        
+    
 }
 
 struct CardView_Previews: PreviewProvider {
