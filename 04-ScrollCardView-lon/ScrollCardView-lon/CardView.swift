@@ -20,6 +20,9 @@ struct CardView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 300, height: 300, alignment: .center)
+                .cornerRadius(15)
+                .padding([.top])
+                
             HStack{
                 VStack(alignment: .leading){
                     Text(authorName)
