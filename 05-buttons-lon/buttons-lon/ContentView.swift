@@ -34,6 +34,24 @@ struct ContentView: View {
                 
             }
             Button(action: {
+                //Qué debe hacer el botón
+                print("Button with Border")
+            }) {
+                //Cómo debe verse el botón
+                Text("Button Border")
+                    .font(.largeTitle)
+                    .fontWeight(.black)
+                    
+                    .padding()
+                    //.background(Color.green)
+                    .foregroundColor(.white)
+                
+                    //.padding(12)
+                    .border(Color.green, width: 6)
+                    
+                
+            }
+            Button(action: {
                 print("Eliminar pulsado")
             }){
                 Image(systemName: "trash")
