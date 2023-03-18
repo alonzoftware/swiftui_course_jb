@@ -8,34 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    var gameNames = [
+        "The Goombas Game",
+        "The Mario Game",
+        "The Luigi Game",
+        "The Toad Adventure",
+        "The Yoshis Story Most Amazing Adventure of his life"
+        
+    ]
+    var gameImages = [
+        "goomba",
+        "luigi",
+        "mario",
+        "toad",
+        "yoshi"
+    ]
     var body: some View {
-        List{
-            Text("Simple Row 1")
-            Text("Simple Row 2")
-        }
-        List{
-            
-            ForEach(1...2,id: \.self){
-                index in
-                Text("Row with ForEach Index \(index)")
+        List(gameNames.indices,id: \.self){
+            index in
+            HStack{
+                Image(self.gameImages[index])
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 100, height: 100, alignment: .center)
+                    .clipped()
+                    .cornerRadius(50)
+                    .padding([.top])
+                Text("\(self.gameNames[index])")
             }
-            
-            ForEach(1...2,id: \.self){
-                Text("Row with ForEach Index$ \($0)")
-            }
-        }
-        List(1...2,id: \.self){
-            Text("Row with List Only \($0)")
-            
+
         }
     }
-    //        VStack {
-    //            Image(systemName: "globe")
-    //                .imageScale(.large)
-    //                .foregroundColor(.accentColor)
-    //            Text("Hello, world!")
-    //        }
-    //        .padding()
 }
 
 struct ContentView_Previews: PreviewProvider {

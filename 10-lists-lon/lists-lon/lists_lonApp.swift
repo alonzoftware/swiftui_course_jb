@@ -11,6 +11,7 @@ import SwiftUI
 struct lists_lonApp: App {
     var body: some Scene {
         WindowGroup {
+            //SimpleListView()
             ContentView()
         }
     }
