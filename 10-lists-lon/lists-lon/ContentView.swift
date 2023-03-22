@@ -25,11 +25,11 @@ struct ContentView: View {
     ]
     
     var games = [
-        Game(name: "The Goombas Game", image: "goomba"),
+        Game(name: "The Goombas Game", image: "goomba",feature: true),
         Game(name: "The Mario Game", image: "luigi"),
         Game(name: "The Luigi Game", image: "mario"),
         Game(name: "The Toad Adventure", image: "toad"),
-        Game(name: "The Yoshis Story Most Amazing Adventure of his life", image: "yoshi"),
+        Game(name: "The Yoshis Story Most Amazing Adventure of his life", image: "yoshi",feature: true),
         
     ]
     var body: some View {
@@ -63,21 +63,37 @@ struct ContentView: View {
         //            }
         //
         //        }
-        //        OPTION 3
-        List(games,id: \.id){
-            game in
-            HStack{
-                Image(game.image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 100, height: 100, alignment: .center)
-                    .clipped()
-                    .cornerRadius(50)
-                    .padding([.top])
-                Text("\(game.name)")
+        //        OPTION 3 WITH STRUCTURE
+        //        List(games,id: \.id){
+        //            game in
+        //            HStack{
+        //                Image(game.image)
+        //                    .resizable()
+        //                    .aspectRatio(contentMode: .fill)
+        //                    .frame(width: 100, height: 100, alignment: .center)
+        //                    .clipped()
+        //                    .cornerRadius(50)
+        //                    .padding([.top])
+        //                Text("\(game.name)")
+        //            }
+        //
+        //        }
+        //        OPTION 4 WITH STRUCTURE IDENTIFIABLE
+//        List(games){
+//            game in
+//            GameRowView(game : game)
+//        }
+        
+        List(games.indices, id: \.self){ idx in
+            if games[idx].feature{
+                GameFullImageRow(game : games[idx])
+            }else{
+                GameRowView(game : games[idx])
             }
-            
+
         }
+        
+        
     }
 }
 
@@ -86,9 +102,50 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-struct Game {
+struct Game: Identifiable{
     var id = UUID()
     var name : String
     var image: String
+    var feature :Bool = false
     
+}
+struct GameRowView: View {
+    var game : Game
+    var body: some View {
+        HStack{
+            Image(game.image)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 100, height: 100, alignment: .center)
+                .clipped()
+                .cornerRadius(50)
+                .padding([.top])
+            Text("\(game.name)")
+        }
+    }
+    
+}
+struct GameFullImageRow : View {
+    var game : Game
+    
+    var body: some View {
+        ZStack{
+            Image(game.image)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height:200)
+                .cornerRadius(15)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 15)
+                        .foregroundColor(.gray)
+                        .opacity(0.25)
+            )
+            
+            Text(game.name)
+                .font(.system(.headline, design: .rounded))
+                .fontWeight(.bold)
+                .foregroundColor(.white )
+                .multilineTextAlignment(.center)
+        }
+    }
 }
