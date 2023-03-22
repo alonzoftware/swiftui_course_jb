@@ -64,7 +64,7 @@ struct ContentView: View {
         //
         //        }
         //        OPTION 3
-        List(games,id: \.name){
+        List(games,id: \.id){
             game in
             HStack{
                 Image(game.image)
@@ -87,6 +87,7 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 struct Game {
+    var id = UUID()
     var name : String
     var image: String
     
