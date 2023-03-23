@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    var gameNames = [
-        "The Goombas Game",
-        "The Mario Game",
-        "The Luigi Game",
+    var gameCharacterNames = [
+        "Goomba",
+        "The Mario GameCharacter",
+        "The Luigi GameCharacter",
         "The Toad Adventure",
         "The Yoshis Story Most Amazing Adventure of his life"
         
     ]
-    var gameImages = [
+    var gameCharacterImages = [
         "goomba",
         "luigi",
         "mario",
@@ -24,74 +24,77 @@ struct ContentView: View {
         "yoshi"
     ]
     
-    var games = [
-        Game(name: "The Goombas Game", image: "goomba",feature: true),
-        Game(name: "The Mario Game", image: "luigi"),
-        Game(name: "The Luigi Game", image: "mario"),
-        Game(name: "The Toad Adventure", image: "toad"),
-        Game(name: "The Yoshis Story Most Amazing Adventure of his life", image: "yoshi",feature: true),
+    var gameCharacters = [
+        GameCharacter(name: "Goomba", image: "goomba"),
+        GameCharacter(name: "Luigi", image: "luigi"),
+        GameCharacter(name: "Mario", image: "mario"),
+        GameCharacter(name: "Toad", image: "toad"),
+        GameCharacter(name: "Yoshi", image: "yoshi"),
         
     ]
     var body: some View {
         //        OPTION 1
-        //        List(gameNames.indices,id: \.self){
+        //        List(gameCharacterNames.indices,id: \.self){
         //            index in
         //            HStack{
-        //                Image(self.gameImages[index])
+        //                Image(self.gameCharacterImages[index])
         //                    .resizable()
         //                    .aspectRatio(contentMode: .fill)
         //                    .frame(width: 100, height: 100, alignment: .center)
         //                    .clipped()
         //                    .cornerRadius(50)
         //                    .padding([.top])
-        //                Text("\(self.gameNames[index])")
+        //                Text("\(self.gameCharacterNames[index])")
         //            }
         //
         //        }
         //        OPTION 2
-        //        List(games.indices,id: \.self){
+        //        List(gameCharacters.indices,id: \.self){
         //            index in
         //            HStack{
-        //                Image(self.games[index].image)
+        //                Image(self.gameCharacters[index].image)
         //                    .resizable()
         //                    .aspectRatio(contentMode: .fill)
         //                    .frame(width: 100, height: 100, alignment: .center)
         //                    .clipped()
         //                    .cornerRadius(50)
         //                    .padding([.top])
-        //                Text("\(self.games[index].name)")
+        //                Text("\(self.gameCharacters[index].name)")
         //            }
         //
         //        }
         //        OPTION 3 WITH STRUCTURE
-        //        List(games,id: \.id){
-        //            game in
+        //        List(gameCharacters,id: \.id){
+        //            gameCharacter in
         //            HStack{
-        //                Image(game.image)
+        //                Image(gameCharacter.image)
         //                    .resizable()
         //                    .aspectRatio(contentMode: .fill)
         //                    .frame(width: 100, height: 100, alignment: .center)
         //                    .clipped()
         //                    .cornerRadius(50)
         //                    .padding([.top])
-        //                Text("\(game.name)")
+        //                Text("\(gameCharacter.name)")
         //            }
         //
         //        }
         //        OPTION 4 WITH STRUCTURE IDENTIFIABLE
-//        List(games){
-//            game in
-//            GameRowView(game : game)
-//        }
-        
-        List(games.indices, id: \.self){ idx in
-            if games[idx].feature{
-                GameFullImageRow(game : games[idx])
-            }else{
-                GameRowView(game : games[idx])
+        //        List(gameCharacters){
+        //            gameCharacter in
+        //            GameCharacterRowView(gameCharacter : gameCharacter)
+        //        }
+        VStack{
+            TitleView()
+            List(gameCharacters.indices, id: \.self){ idx in
+                if gameCharacters[idx].feature{
+                    GameCharacterFullImageRow(gameCharacter : gameCharacters[idx])
+                }else{
+                    GameCharacterRowView(gameCharacter : gameCharacters[idx])
+                }
+                
             }
-
         }
+        
         
         
     }
@@ -102,35 +105,61 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-struct Game: Identifiable{
+struct GameCharacter: Identifiable{
     var id = UUID()
     var name : String
     var image: String
     var feature :Bool = false
     
 }
-struct GameRowView: View {
-    var game : Game
+struct GameCharacterRowView: View {
+    var gameCharacter : GameCharacter
     var body: some View {
         HStack{
-            Image(game.image)
+            Image(gameCharacter.image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 100, height: 100, alignment: .center)
                 .clipped()
                 .cornerRadius(50)
                 .padding([.top])
-            Text("\(game.name)")
+            Text("\(gameCharacter.name)")
         }
     }
     
 }
-struct GameFullImageRow : View {
-    var game : Game
+
+struct TitleView : View {
+    var body: some View {
+        ZStack{
+            
+            Image("nintendo-logo")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height:100)
+                .cornerRadius(15)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 15)
+                        .foregroundColor(.gray)
+                        .opacity(0.25)
+                )
+            
+            Text("Characters")
+                .font(.system(.title, design: .rounded))
+                .fontWeight(.bold)
+                .foregroundColor(.white )
+                .multilineTextAlignment(.center)
+                .offset(x: 0, y: 50)
+        }
+        
+    }
+}
+struct GameCharacterFullImageRow : View {
+    var gameCharacter : GameCharacter
     
     var body: some View {
         ZStack{
-            Image(game.image)
+            Image(gameCharacter.image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(height:200)
@@ -139,9 +168,9 @@ struct GameFullImageRow : View {
                     RoundedRectangle(cornerRadius: 15)
                         .foregroundColor(.gray)
                         .opacity(0.25)
-            )
+                )
             
-            Text(game.name)
+            Text(gameCharacter.name)
                 .font(.system(.headline, design: .rounded))
                 .fontWeight(.bold)
                 .foregroundColor(.white )
