@@ -12,6 +12,7 @@ struct navigation_lonApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+//            DetailView(gameCharacter : GameCharacter(name:"Goomba",image: "goomba"))
         }
     }
 }

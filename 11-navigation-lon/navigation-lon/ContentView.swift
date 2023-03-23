@@ -19,20 +19,27 @@ struct ContentView: View {
         
     ]
     var body: some View {
-
+        
         NavigationView{
             List(gameCharacters.indices, id: \.self){ idx in
-                if gameCharacters[idx].feature{
-                    GameCharacterFullImageRow(gameCharacter : gameCharacters[idx])
-                }else{
-                    GameCharacterRowView(gameCharacter : gameCharacters[idx])
+                NavigationLink(destination: DetailView(gameCharacter: self.gameCharacters[idx])){
+                    if gameCharacters[idx].feature{
+                        GameCharacterFullImageRow(gameCharacter : gameCharacters[idx])
+                    }else{
+                        GameCharacterRowView(gameCharacter : gameCharacters[idx])
+                    }
                 }
                 
+                //  NavigationLink(destination: DetailView(gameCharacter: self.gameCharacters[idx])){
+                //  EmptyView()
+                //  }
+                
             }
-            .navigationTitle("Nintendo Characters")
-        }
             
-
+            .navigationBarTitle("Nintendo Character", displayMode: .automatic)
+        }
+        
+        
     }
 }
 
