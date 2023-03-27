@@ -13,16 +13,17 @@ struct DetailView: View {
     
     var gameCharacter: GameCharacter
     
+    
     var body: some View {
         ScrollView{
             VStack{
                 Spacer()
-                        .frame(height: 80)
+                    .frame(height: 80)
                 Image(gameCharacter.image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(height:350)
-                    //.clipped()
+                //.clipped()
                 
                 Text(gameCharacter.name)
                     .font(.system(.title, design: .rounded))
@@ -33,12 +34,13 @@ struct DetailView: View {
                 Spacer()
                 
             }
+            
         }
         //.navigationBarTitle("", displayMode: .inline)
         .edgesIgnoringSafeArea(.top)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading:
-        Button(action: {
+                                Button(action: {
             //Navegar a la pantalla previa
             self.presentationMode.wrappedValue.dismiss()
         }, label: {

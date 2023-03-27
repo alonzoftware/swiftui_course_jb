@@ -18,25 +18,61 @@ struct ContentView: View {
         GameCharacter(name: "Yoshi", image: "yoshi"),
         
     ]
+    
+    /*init() {
+        let appearance = UINavigationBarAppearance()
+        appearance.largeTitleTextAttributes = [
+            .font: UIFont(name: "AmericanTypewriter-CondensedLight", size: 32)!,
+            .foregroundColor: UIColor.systemYellow
+        ]
+        appearance.titleTextAttributes = [
+            .font: UIFont(name: "AmericanTypewriter-CondensedLight", size: 18)!,
+            .foregroundColor: UIColor.systemYellow
+        ]
+        appearance.setBackIndicatorImage(
+            //                UIImage(systemName: "arrow.left.circle.fill"),
+            UIImage(systemName: "arrowshape.left.fill"),
+            //                transitionMaskImage: UIImage(systemName: "arrow.left.circle")
+            transitionMaskImage: UIImage(systemName: "arrowshape.left.fill")
+        )
+        
+        UINavigationBar.appearance().tintColor = .green
+        
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+    }*/
+    
     var body: some View {
         
         NavigationView{
             List(gameCharacters.indices, id: \.self){ idx in
-                NavigationLink(destination: DetailView(gameCharacter: self.gameCharacters[idx])){
+                //SHOW Navigation LINK
+                //                NavigationLink(destination: DetailView(gameCharacter: self.gameCharacters[idx])){
+                //                    if gameCharacters[idx].feature{
+                //                        GameCharacterFullImageRow(gameCharacter : gameCharacters[idx])
+                //                    }else{
+                //                        GameCharacterRowView(gameCharacter : gameCharacters[idx])
+                //                    }
+                //                }
+                
+                //HIDE Navigation LINK
+                ZStack{
+                    
                     if gameCharacters[idx].feature{
                         GameCharacterFullImageRow(gameCharacter : gameCharacters[idx])
                     }else{
                         GameCharacterRowView(gameCharacter : gameCharacters[idx])
                     }
+                    NavigationLink(destination: DetailView(gameCharacter: self.gameCharacters[idx])){
+                        EmptyView()
+                    }.opacity(0.0)
                 }
-                
-                //  NavigationLink(destination: DetailView(gameCharacter: self.gameCharacters[idx])){
-                //  EmptyView()
-                //  }
+
                 
             }
             
-            .navigationBarTitle("Nintendo Character", displayMode: .automatic)
+            .navigationBarTitle("Nintendo Characters", displayMode: .automatic)//displayMode: .automatic,.inline,.large
         }
         
         
@@ -67,6 +103,7 @@ struct GameCharacterRowView: View {
                 .cornerRadius(50)
                 .padding([.top])
             Text("\(gameCharacter.name)")
+                .frame(width: 250)
         }
     }
     
