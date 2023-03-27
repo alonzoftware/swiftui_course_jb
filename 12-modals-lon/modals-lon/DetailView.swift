@@ -1,8 +1,8 @@
 //
 //  DetailView.swift
-//  navigation-lon
+//  modals-lon
 //
-//  Created by Rene Alonzo Choque Saire on 23/3/23.
+//  Created by Alonzo Choque on 27/3/23.
 //
 
 import SwiftUI
