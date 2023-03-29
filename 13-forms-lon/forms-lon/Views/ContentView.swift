@@ -41,28 +41,100 @@ struct ContentView: View {
      UINavigationBar.appearance().compactAppearance = appearance
      UINavigationBar.appearance().scrollEdgeAppearance = appearance
      }*/
-    
+    @State var selectedGameCharacter : GameCharacter?
     var body: some View {
         
         NavigationView{
-            List(gameCharacters.indices, id: \.self){ idx in
+            List{ ForEach(gameCharacters){ gameCharacter in
                 //HIDE Navigation LINK
                 ZStack{
                     
-                    GameCharacterRowView(gameCharacter : gameCharacters[idx])
-                    
-                    NavigationLink(destination: DetailView(gameCharacter: gameCharacters[idx])){
-                        EmptyView()
-                    }.opacity(0.0)
+                    GameCharacterRowView(gameCharacter : gameCharacter)
+                        .contextMenu{
+                            
+                            Button(action: {
+                                self.setPurchased(item: gameCharacter)
+                            }) {
+                                HStack{
+                                    Text("Comprar")
+                                    Image(systemName: "checkmark.circle")
+                                }
+                            }
+                            
+                            Button(action: {
+                                self.setFeatured(item: gameCharacter)
+                            }) {
+                                HStack{
+                                    Text("Destacar")
+                                    Image(systemName: "star")
+                                }
+                            }
+                            
+                            Button(action: {
+                                self.delete(item: gameCharacter)
+                            }) {
+                                HStack{
+                                    Text("Eliminar")
+                                    Image(systemName: "trash")
+                                }
+                            }
+                        }
+                        .onTapGesture {
+                            self.selectedGameCharacter = gameCharacter
+                        }
+                        .actionSheet(item: self.$selectedGameCharacter){ _ in
+                            ActionSheet(title: Text("Indica tu acción a realizar"),
+                                        message: nil,
+                                        buttons: [
+                                            .default(Text("Marcar como favorito"), action: {
+                                                if let selectedGameCharacter = self.selectedGameCharacter {
+                                                    self.setFeatured(item: selectedGameCharacter)
+                                                }
+                                            }),
+                                            .destructive(Text("Eliminar curso"), action: {
+                                                if let selectedGameCharacter = self.selectedGameCharacter {
+                                                    self.delete(item: selectedGameCharacter)
+                                                }
+                                            }),
+                                            //TODO: colocar aquí más opciones si se desea
+                                            .cancel()
+                                        ])
+                        }
+//                                        NavigationLink(destination: DetailView(gameCharacter: gameCharacter)){
+//                                            EmptyView()
+//                                        }.opacity(0.0)
                 }
                 
-                
+            }.onDelete{ (indexSet) in
+                self.gameCharacters.remove(atOffsets: indexSet)
+            }
             }
             .navigationBarTitle("Nintendo Characters", displayMode: .automatic)
         }
         
         
     }
+    
+    
+    
+    private func setFeatured(item gameCharacter: GameCharacter){
+        if let idx = self.gameCharacters.firstIndex(where: {$0.id == gameCharacter.id}){
+            self.gameCharacters[idx].featured.toggle()
+        }
+    }
+    
+    private func setPurchased(item gameCharacter: GameCharacter){
+        if let idx = self.gameCharacters.firstIndex(where: {$0.id == gameCharacter.id}){
+            self.gameCharacters[idx].purchased.toggle()
+        }
+    }
+    
+    private func delete(item gameCharacter: GameCharacter){
+        if let idx = self.gameCharacters.firstIndex(where: {$0.id == gameCharacter.id}){
+            self.gameCharacters.remove(at: idx)
+        }
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
