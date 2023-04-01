@@ -41,7 +41,10 @@ struct ContentView: View {
      UINavigationBar.appearance().compactAppearance = appearance
      UINavigationBar.appearance().scrollEdgeAppearance = appearance
      }*/
-    @State var selectedGameCharacter : GameCharacter?
+    @State private var showActionSheet = false
+    @State private var selectedGameCharacter : GameCharacter?
+    @State private var showSettingsView: Bool = false
+    
     var body: some View {
         
         NavigationView{
@@ -80,29 +83,44 @@ struct ContentView: View {
                             }
                         }
                         .onTapGesture {
+                            self.showActionSheet.toggle()
                             self.selectedGameCharacter = gameCharacter
                         }
-                        .actionSheet(item: self.$selectedGameCharacter){ _ in
+                    //                        .actionSheet(isPresented: self.$showActionSheet){
+                    //                            ActionSheet(title: Text("Indica tu acción a realizar"),
+                    //                                        message: nil,
+                    //                                        buttons: [
+                    //                                            .default(Text("Marcar como favorito"), action: {
+                    //                                                if let selectedGameCharacter = self.selectedGameCharacter {
+                    //                                                    self.setFeatured(item: selectedGameCharacter)
+                    //                                                }
+                    //                                            }),
+                    //                                            .destructive(Text("Eliminar curso"), action: {
+                    //                                                if let selectedGameCharacter = self.selectedGameCharacter {
+                    //                                                    self.delete(item: selectedGameCharacter)
+                    //                                                }
+                    //                                            }),
+                    //                                            //TODO: colocar aquí más opciones si se desea
+                    //                                            .cancel()
+                    //                                        ])
+                    //                        }
+                        .actionSheet(item: self.$selectedGameCharacter){ gameCharacter in
                             ActionSheet(title: Text("Indica tu acción a realizar"),
                                         message: nil,
                                         buttons: [
                                             .default(Text("Marcar como favorito"), action: {
-                                                if let selectedGameCharacter = self.selectedGameCharacter {
-                                                    self.setFeatured(item: selectedGameCharacter)
-                                                }
+                                                self.setFeatured(item: gameCharacter)
                                             }),
                                             .destructive(Text("Eliminar curso"), action: {
-                                                if let selectedGameCharacter = self.selectedGameCharacter {
-                                                    self.delete(item: selectedGameCharacter)
-                                                }
+                                                self.delete(item: gameCharacter)
                                             }),
                                             //TODO: colocar aquí más opciones si se desea
                                             .cancel()
                                         ])
                         }
-//                                        NavigationLink(destination: DetailView(gameCharacter: gameCharacter)){
-//                                            EmptyView()
-//                                        }.opacity(0.0)
+                    //                                        NavigationLink(destination: DetailView(gameCharacter: gameCharacter)){
+                    //                                            EmptyView()
+                    //                                        }.opacity(0.0)
                 }
                 
             }.onDelete{ (indexSet) in
