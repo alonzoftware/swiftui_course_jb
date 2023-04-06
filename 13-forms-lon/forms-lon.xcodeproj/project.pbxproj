@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D05918ED29DDF6BE003CB8DD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05918EC29DDF6BE003CB8DD /* SettingsView.swift */; };
 		D06FADEF29D2631E0092C643 /* forms_lonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06FADEE29D2631E0092C643 /* forms_lonApp.swift */; };
 		D06FADF129D2631E0092C643 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06FADF029D2631E0092C643 /* ContentView.swift */; };
 		D06FADF329D263210092C643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06FADF229D263210092C643 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D05918EC29DDF6BE003CB8DD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D06FADEB29D2631E0092C643 /* forms-lon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "forms-lon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06FADEE29D2631E0092C643 /* forms_lonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forms_lonApp.swift; sourceTree = "<group>"; };
 		D06FADF029D2631E0092C643 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				D06FADF029D2631E0092C643 /* ContentView.swift */,
 				D06FADFC29D2639D0092C643 /* DetailView.swift */,
+				D05918EC29DDF6BE003CB8DD /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				D06FADF129D2631E0092C643 /* ContentView.swift in Sources */,
 				D06FAE0329D264990092C643 /* GameCharacterFactory.swift in Sources */,
 				D06FAE0129D264610092C643 /* GameCharacter.swift in Sources */,
+				D05918ED29DDF6BE003CB8DD /* SettingsView.swift in Sources */,
 				D06FADFD29D2639D0092C643 /* DetailView.swift in Sources */,
 				D06FADEF29D2631E0092C643 /* forms_lonApp.swift in Sources */,
 			);
