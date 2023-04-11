@@ -128,6 +128,19 @@ struct ContentView: View {
             }
             }
             .navigationBarTitle("Nintendo Characters", displayMode: .automatic)
+            .navigationBarItems(trailing:
+                                    Button(action: {
+                self.showSettingsView = true
+            }, label: {
+                
+                Image(systemName: "line.horizontal.3.decrease.circle")
+                    .font(.title)
+                    .foregroundColor(.gray)
+            })
+            )
+            .sheet(isPresented: $showSettingsView){
+                SettingsView()//.environmentObject(self.settings)
+            }
         }
         
         

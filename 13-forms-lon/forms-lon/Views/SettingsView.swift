@@ -29,6 +29,8 @@ struct SettingsView: View {
         }
     }
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         NavigationView{
             Form {
@@ -57,6 +59,29 @@ struct SettingsView: View {
                 }
             }
             .navigationBarTitle("Settings")
+            .navigationBarItems(leading:
+                                    Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+                print("Cerrar Modal")
+            }, label: {
+                Image(systemName:"xmark.circle")
+                    .font(.title)
+                    .foregroundColor(.gray)
+            }),
+                                trailing:
+                                    Button(action: {
+                //                                self.settings.order = self.selectedOrder
+                //                                self.settings.showPurchasedOnly = self.showPurchasedOnly
+                //                                self.settings.maxPrice = self.maxPrice
+                //
+                self.presentationMode.wrappedValue.dismiss()
+                print("Guardar Informacion")
+            }, label: {
+                Image(systemName: "checkmark.icloud")
+                    .font(.title)
+                    .foregroundColor(.gray)
+            })
+            )
         }
     }
 }
