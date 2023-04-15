@@ -36,12 +36,12 @@ struct SettingsView: View {
             Form {
                 Section(header: Text("Ordering by Character")){
                     Picker(selection: $selectedOrder, label: Text("Character Order")){
-                        //                                            ForEach(SortingOrderType.allCases, id: \.self){ orderType in
-                        //                                                Text(orderType.description)
-                        //                                            }
-                        ForEach(0..<sortingOrders.count, id:\.self){
-                            Text(self.sortingOrders[$0])
+                        ForEach(SortingOrderType.allCases, id: \.self){ orderType in
+                            Text(orderType.description)
                         }
+                        //                        ForEach(0..<sortingOrders.count, id:\.self){
+                        //                            Text(self.sortingOrders[$0])
+                        //                        }
                     }
                 }
                 Section(header: Text("Filter Character")){

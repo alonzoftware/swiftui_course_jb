@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D046A26229EB5633002AD2BC /* SortingOrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D046A26129EB5633002AD2BC /* SortingOrderType.swift */; };
+		D046A26429EB5F67002AD2BC /* SettingsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D046A26329EB5F67002AD2BC /* SettingsFactory.swift */; };
 		D05918ED29DDF6BE003CB8DD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05918EC29DDF6BE003CB8DD /* SettingsView.swift */; };
 		D06FADEF29D2631E0092C643 /* forms_lonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06FADEE29D2631E0092C643 /* forms_lonApp.swift */; };
 		D06FADF129D2631E0092C643 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06FADF029D2631E0092C643 /* ContentView.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D046A26129EB5633002AD2BC /* SortingOrderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingOrderType.swift; sourceTree = "<group>"; };
+		D046A26329EB5F67002AD2BC /* SettingsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFactory.swift; sourceTree = "<group>"; };
 		D05918EC29DDF6BE003CB8DD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D06FADEB29D2631E0092C643 /* forms-lon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "forms-lon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06FADEE29D2631E0092C643 /* forms_lonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forms_lonApp.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 			children = (
 				D06FAE0029D264610092C643 /* GameCharacter.swift */,
 				D06FAE0229D264990092C643 /* GameCharacterFactory.swift */,
+				D046A26129EB5633002AD2BC /* SortingOrderType.swift */,
+				D046A26329EB5F67002AD2BC /* SettingsFactory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -166,11 +172,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D06FADF129D2631E0092C643 /* ContentView.swift in Sources */,
+				D046A26429EB5F67002AD2BC /* SettingsFactory.swift in Sources */,
 				D06FAE0329D264990092C643 /* GameCharacterFactory.swift in Sources */,
 				D06FAE0129D264610092C643 /* GameCharacter.swift in Sources */,
 				D05918ED29DDF6BE003CB8DD /* SettingsView.swift in Sources */,
 				D06FADFD29D2639D0092C643 /* DetailView.swift in Sources */,
 				D06FADEF29D2631E0092C643 /* forms_lonApp.swift in Sources */,
+				D046A26229EB5633002AD2BC /* SortingOrderType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
