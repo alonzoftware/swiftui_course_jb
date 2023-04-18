@@ -9,13 +9,13 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    
+    @EnvironmentObject var settings : SettingsFactory;
     private var sortingOrders = [
         "alphabetical order",
         "favorite items at the beginning",
         "items purchased at the start"
     ]
-    @State private var selectedOrder = 0
+    @State private var selectedOrder = SortingOrderType.alphabetical
     @State private var showPurchasedOnly = false
     @State private var maxPrice = 5 {
         didSet{
@@ -70,10 +70,10 @@ struct SettingsView: View {
             }),
                                 trailing:
                                     Button(action: {
-                //                                self.settings.order = self.selectedOrder
-                //                                self.settings.showPurchasedOnly = self.showPurchasedOnly
-                //                                self.settings.maxPrice = self.maxPrice
-                //
+                self.settings.order = self.selectedOrder
+                self.settings.showPurchasedOnly = self.showPurchasedOnly
+                self.settings.maxPrice = self.maxPrice
+                
                 self.presentationMode.wrappedValue.dismiss()
                 print("Guardar Informacion")
             }, label: {
@@ -82,12 +82,17 @@ struct SettingsView: View {
                     .foregroundColor(.gray)
             })
             )
+        }        .onAppear {
+            self.selectedOrder = self.settings.order
+            self.showPurchasedOnly = self.settings.showPurchasedOnly
+            self.maxPrice = self.settings.maxPrice
         }
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView().environmentObject(SettingsFactory())
+//        SettingsView(settings : SettingsFactory())
     }
 }

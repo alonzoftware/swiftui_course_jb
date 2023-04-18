@@ -45,6 +45,8 @@ struct ContentView: View {
     @State private var selectedGameCharacter : GameCharacter?
     @State private var showSettingsView: Bool = false
     
+    @EnvironmentObject var settings: SettingsFactory
+    
     var body: some View {
         
         NavigationView{
@@ -139,7 +141,7 @@ struct ContentView: View {
             })
             )
             .sheet(isPresented: $showSettingsView){
-                SettingsView()//.environmentObject(self.settings)
+                SettingsView().environmentObject(self.settings)
             }
         }
         
@@ -170,7 +172,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(SettingsFactory())
     }
 }
 
