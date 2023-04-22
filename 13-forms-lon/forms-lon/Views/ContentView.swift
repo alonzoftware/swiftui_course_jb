@@ -12,7 +12,7 @@ struct ContentView: View {
     @State var gameCharacters = [
         GameCharacter(name: "Goomba", image: "goomba", type : "Enemy", priceLevel: 4),
         GameCharacter(name: "Luigi", image: "luigi", type : "Friend", priceLevel: 3),
-        GameCharacter(name: "Mario", image: "mario", type : "Friend", priceLevel: 2),
+        GameCharacter(name: "Mario", image: "mario", type : "Friend", priceLevel: 2, purchased: true),
         GameCharacter(name: "Toad", image: "toad", type : "Friend", priceLevel: 1,featured: true),
         GameCharacter(name: "Yoshi", image: "yoshi", type : "Friend", priceLevel: 4,featured: true,purchased: true),
         
@@ -41,7 +41,7 @@ struct ContentView: View {
      UINavigationBar.appearance().compactAppearance = appearance
      UINavigationBar.appearance().scrollEdgeAppearance = appearance
      }*/
-    @State private var showActionSheet = false
+    //@State private var showActionSheet = false
     @State private var selectedGameCharacter : GameCharacter?
     @State private var showSettingsView: Bool = false
     
@@ -50,7 +50,9 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView{
-            List{ ForEach(gameCharacters){ gameCharacter in
+            List{ ForEach(gameCharacters
+                .filter(shouldShowCharacter)){ gameCharacter in
+//                .sorted(by: self.settings.order.predicateSort())){ gameCharacter in
                 //HIDE Navigation LINK
                 ZStack{
                     
@@ -85,7 +87,7 @@ struct ContentView: View {
                             }
                         }
                         .onTapGesture {
-                            self.showActionSheet.toggle()
+                            //self.showActionSheet.toggle()
                             self.selectedGameCharacter = gameCharacter
                         }
                     //                        .actionSheet(isPresented: self.$showActionSheet){
@@ -166,6 +168,12 @@ struct ContentView: View {
         if let idx = self.gameCharacters.firstIndex(where: {$0.id == gameCharacter.id}){
             self.gameCharacters.remove(at: idx)
         }
+    }
+    
+    private func shouldShowCharacter(gameCharacter: GameCharacter) -> Bool {
+        let checkPurchased = (self.settings.showPurchasedOnly && gameCharacter.purchased) || !self.settings.showPurchasedOnly
+        let checkPrice = (gameCharacter.priceLevel <= self.settings.maxPrice)
+        return checkPurchased && checkPrice
     }
     
 }

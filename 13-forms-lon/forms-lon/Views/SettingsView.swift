@@ -73,7 +73,7 @@ struct SettingsView: View {
                 self.settings.order = self.selectedOrder
                 self.settings.showPurchasedOnly = self.showPurchasedOnly
                 self.settings.maxPrice = self.maxPrice
-                
+                self.settings.objectWillChange.send()
                 self.presentationMode.wrappedValue.dismiss()
                 print("Guardar Informacion")
             }, label: {
