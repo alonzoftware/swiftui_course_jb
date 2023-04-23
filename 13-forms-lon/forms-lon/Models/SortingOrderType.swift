@@ -30,15 +30,15 @@ enum SortingOrderType: Int, CaseIterable {
     }
     
     
-//    func predicateSort() -> ((Course, Course) -> Bool){
-//        switch self {
-//        case .alphabetical:
-//            return {$0.name < $1.name}
-//        case .featured:
-//            return {$0.featured && !$1.featured}
-//        case .purchased:
-//            return {$0.purchased && !$1.purchased}
-//        }
-//    }
+    func predicateSort() -> ((GameCharacter, GameCharacter) -> Bool){
+        switch self {
+        case .alphabetical:
+            return {$0.name < $1.name}
+        case .featured:
+            return {$0.featured && !$1.featured}
+        case .purchased:
+            return {$0.purchased && !$1.purchased}
+        }
+    }
     
 }

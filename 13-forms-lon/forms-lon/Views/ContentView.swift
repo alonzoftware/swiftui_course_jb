@@ -10,12 +10,11 @@ import SwiftUI
 
 struct ContentView: View {
     @State var gameCharacters = [
+        GameCharacter(name: "Toad", image: "toad", type : "Friend", priceLevel: 1,featured: true),
+        GameCharacter(name: "Yoshi", image: "yoshi", type : "Friend", priceLevel: 4,featured: true,purchased: true),
         GameCharacter(name: "Goomba", image: "goomba", type : "Enemy", priceLevel: 4),
         GameCharacter(name: "Luigi", image: "luigi", type : "Friend", priceLevel: 3),
         GameCharacter(name: "Mario", image: "mario", type : "Friend", priceLevel: 2, purchased: true),
-        GameCharacter(name: "Toad", image: "toad", type : "Friend", priceLevel: 1,featured: true),
-        GameCharacter(name: "Yoshi", image: "yoshi", type : "Friend", priceLevel: 4,featured: true,purchased: true),
-        
     ]
     
     /*init() {
@@ -51,8 +50,10 @@ struct ContentView: View {
         
         NavigationView{
             List{ ForEach(gameCharacters
-                .filter(shouldShowCharacter)){ gameCharacter in
-//                .sorted(by: self.settings.order.predicateSort())){ gameCharacter in
+                .filter(shouldShowCharacter)
+//                .sorted(by: {$0.name < $1.name})
+                .sorted(by: self.settings.order.predicateSort())
+            ){ gameCharacter in
                 //HIDE Navigation LINK
                 ZStack{
                     
