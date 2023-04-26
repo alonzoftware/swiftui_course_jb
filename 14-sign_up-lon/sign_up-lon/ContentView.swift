@@ -16,8 +16,10 @@ struct ContentView: View {
                 .bold()
                 .padding(.bottom, 50)
             SingleFormView(fieldName: "Nombre de Usuario", fieldValue: $registrationVM.username)
-                .padding()
-        }
+            SingleFormView(fieldName: "Clave de Acceso", fieldValue: $registrationVM.password, isProtected: true)
+            SingleFormView(fieldName: "Confirmar Clave de Acceso", fieldValue: $registrationVM.confirmPassword, isProtected: true)
+            Spacer()
+        }.padding()
     }
     struct SingleFormView: View {
         
