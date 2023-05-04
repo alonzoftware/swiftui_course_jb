@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A610F632A0413DC00357110 /* GestureCombinedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A610F622A0413DC00357110 /* GestureCombinedView.swift */; };
 		D0679D4E2A01CAB3000FDD42 /* gestos_lonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0679D4D2A01CAB3000FDD42 /* gestos_lonApp.swift */; };
 		D0679D502A01CAB3000FDD42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0679D4F2A01CAB3000FDD42 /* ContentView.swift */; };
 		D0679D522A01CAB6000FDD42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0679D512A01CAB6000FDD42 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A610F622A0413DC00357110 /* GestureCombinedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureCombinedView.swift; sourceTree = "<group>"; };
 		D0679D4A2A01CAB3000FDD42 /* gestos-lon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gestos-lon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0679D4D2A01CAB3000FDD42 /* gestos_lonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gestos_lonApp.swift; sourceTree = "<group>"; };
 		D0679D4F2A01CAB3000FDD42 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				D0679D512A01CAB6000FDD42 /* Assets.xcassets */,
 				D0679D532A01CAB6000FDD42 /* Preview Content */,
 				D08B54AD2A030471003323CD /* DragView.swift */,
+				9A610F622A0413DC00357110 /* GestureCombinedView.swift */,
 			);
 			path = "gestos-lon";
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 				D0679D502A01CAB3000FDD42 /* ContentView.swift in Sources */,
 				D0679D4E2A01CAB3000FDD42 /* gestos_lonApp.swift in Sources */,
 				D08B54AE2A030471003323CD /* DragView.swift in Sources */,
+				9A610F632A0413DC00357110 /* GestureCombinedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
