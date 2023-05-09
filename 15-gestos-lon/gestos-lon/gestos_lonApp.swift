@@ -12,8 +12,9 @@ struct gestos_lonApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            DragView()
+//            DragView()
 //            GestureCombinedView()
+            MagnificationView()
         }
     }
 }

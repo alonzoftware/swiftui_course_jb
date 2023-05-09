@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9A610F632A0413DC00357110 /* GestureCombinedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A610F622A0413DC00357110 /* GestureCombinedView.swift */; };
 		9A7CC36C2A056629009D0053 /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7CC36B2A056629009D0053 /* DraggableView.swift */; };
+		9A7F52E02A0AA3260004351C /* MagnificableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7F52DF2A0AA3260004351C /* MagnificableView.swift */; };
+		9A7F52E22A0AA4940004351C /* MagnificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7F52E12A0AA4940004351C /* MagnificationView.swift */; };
 		9ABF984A2A095BA300250A0C /* DragViewSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABF98492A095BA300250A0C /* DragViewSimple.swift */; };
 		D0679D4E2A01CAB3000FDD42 /* gestos_lonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0679D4D2A01CAB3000FDD42 /* gestos_lonApp.swift */; };
 		D0679D502A01CAB3000FDD42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0679D4F2A01CAB3000FDD42 /* ContentView.swift */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		9A610F622A0413DC00357110 /* GestureCombinedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureCombinedView.swift; sourceTree = "<group>"; };
 		9A7CC36B2A056629009D0053 /* DraggableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
+		9A7F52DF2A0AA3260004351C /* MagnificableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnificableView.swift; sourceTree = "<group>"; };
+		9A7F52E12A0AA4940004351C /* MagnificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnificationView.swift; sourceTree = "<group>"; };
 		9ABF98492A095BA300250A0C /* DragViewSimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragViewSimple.swift; sourceTree = "<group>"; };
 		D0679D4A2A01CAB3000FDD42 /* gestos-lon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gestos-lon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0679D4D2A01CAB3000FDD42 /* gestos_lonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gestos_lonApp.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				9A610F622A0413DC00357110 /* GestureCombinedView.swift */,
 				9A7CC36B2A056629009D0053 /* DraggableView.swift */,
 				9ABF98492A095BA300250A0C /* DragViewSimple.swift */,
+				9A7F52DF2A0AA3260004351C /* MagnificableView.swift */,
+				9A7F52E12A0AA4940004351C /* MagnificationView.swift */,
 			);
 			path = "gestos-lon";
 			sourceTree = "<group>";
@@ -149,11 +155,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A7F52E02A0AA3260004351C /* MagnificableView.swift in Sources */,
 				D0679D502A01CAB3000FDD42 /* ContentView.swift in Sources */,
 				D0679D4E2A01CAB3000FDD42 /* gestos_lonApp.swift in Sources */,
 				D08B54AE2A030471003323CD /* DragView.swift in Sources */,
 				9A7CC36C2A056629009D0053 /* DraggableView.swift in Sources */,
 				9ABF984A2A095BA300250A0C /* DragViewSimple.swift in Sources */,
+				9A7F52E22A0AA4940004351C /* MagnificationView.swift in Sources */,
 				9A610F632A0413DC00357110 /* GestureCombinedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
