@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>{
+    "quiz": {
+        "sport": {
+            "q1": {
+                "question": "Which one is correct team name in NBA?",
+                "options": [
+                    "New York Bulls",
+                    "Los Angeles Kings",
+                    "Golden State Warriros",
+                    "Huston Rocket"
+                ],
+                "answer": "Huston Rocket"
+            }
+        },
+        "maths": {
+            "q1": {
+                "question": "5 + 7 = ?",
+                "options": [
+                    "10",
+                    "11",
+                    "12",
+                    "13"
+                ],
+                "answer": "12"
+            },
+            "q2": {
+                "question": "12 - 8 = ?",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "answer": "4"
+            }
+</string>
+			<key>ModifiedRange</key>
+			<string>{31, 930}</string>
+			<key>OriginalContent</key>
+			<string>{ "fruits":
+  [
+    {
+    "fruit": "Apple",
+    "size":"Large",
+    "color":"Red",
+    "price": 2,
+    "location":{
+        "country":"Brasil"
+    }
+    },
+    {
+    "fruit": "Banana",
+    "size":"Medium",
+    "color":"yellow",
+    "price": 2,
+    "location":{
+        "country":"Jamaica"
+    }
+  }
+   ]
+}
+"""
+struct FruitStore : Codable {
+    var fruits : [Fruit];
+}
+struct Fruit : Codable {
+    var name: String
+    var size: String
+    var color: String
+    var price: Int
+    var country: String
+    enum CodingKeys : String, CodingKey{
+        case name = "fruit"
+        case size
+        case color
+        case price
+        case country = "location"
+        
+    }
+    enum LocationKeys: String, CodingKey{
+        case country
+    }
+    
+    init(from decoder: Decoder)throws {
+        let values = try decoder.container(keyedBy : CodingKeys.self)
+        self.name = try values.decode(String.self, forKey:.name)
+        self.size = try values.decode(String.self, forKey:.size)
+        self.color = try values.decode(String.self, forKey:.color)
+        self.price = try values.decode(Int.self, forKey:.price)
+        let location = try values.nestedContainer(keyedBy: LocationKeys.self, forKey: .country)
+        self.country = try location.decode(String.self, forKey: .country)
+    }
+    
+}
+let decoder = JSONDecoder()
+if let jsonData = myJson.data(using: .utf8){
+    do{
+        //let fruit = try decoder.decode(Fruit.self, from: jsonData)
+        //print(fruit)
+        let fruitStore = try decoder.decode(FruitStore.self, from: jsonData)
+        for fruit in fruitStore.fruits {
+            print(fruit)
+</string>
+			<key>OriginalRange</key>
+			<string>{31, 1618}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>    }
+}
+"""
+struct Tests: Codable {
+    let quiz: Quiz
+}
+struct Quiz: Codable {
+    let sport: Sport
+    let maths: Maths
+}
+struct Maths: Codable {
+    let q1, q2: Q1
+}
+struct Q1: Codable {
+    let question: String
+    let options: [String]
+    let answer: String
+}
+struct Sport: Codable {
+    let q1: Q1
+}
+
+let decoder = JSONDecoder()
+if let jsonData = myJson.data(using: .utf8){
+    do{
+        let tests = try decoder.decode(Tests.self, from: jsonData)
+        print (tests.quiz.sport)
+        print (tests.quiz.maths)
+    }catch{
+        print(error)
+    }
+}
+///////////
+struct Quiz: Codable {
+    var quiz: Categories
+}
+
+struct Categories: Codable {
+    var sport: Sport
+    var maths: Maths
+}
+
+struct Sport: Codable {
+    var q1: Question
+}
+
+struct Maths: Codable {
+    var q1: Question
+    var q2: Question
+}
+
+struct Question: Codable {
+    var question: String
+    var options: [String]
+    var answer: String
+}
+
+let decoder = JSONDecoder()
+
+if let jsonData = myJSON.data(using: .utf8) {
+    do {
+        let quiz = try decoder.decode(Quiz.self, from: jsonData)
+        print(quiz.quiz.sport.q1)
+        print(quiz.quiz.maths.q1)
+        print(quiz.quiz.maths.q2)
+        
+    } catch {
+        print(error)
+    }
+}
+///////////
+struct Quiz: Codable{
+    var quizs: Subjects
+}
+
+struct Subjects: Codable{
+    var sport: Sport
+    var maths: Maths
+}
+
+struct Sport: Codable{
+    var q1: Questions
+}
+
+struct Maths: Codable{
+    var q1: Questions
+    var q2: Questions
+}
+
+struct Questions: Codable{
+    var question: String
+    var options: [String]
+    var answer: String
+
+    enum CodingKeys: String, CodingKey {
+        case question
+        case options
+        case answer
+    }
+    
+   init (from decoder: Decoder) throws{
+        
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        
+        self.question = try values.decode(String.self, forKey: .question)
+        self.options = try values.decode([String].self, forKey: .options)
+        self.answer = try values.decode(String.self, forKey: .answer)
+   }
+}
+
+let decoder = JSONDecoder()
+                
+var result = ""
+
+if let jsonData = myJson.data(using: .utf8){
+    do{
+        let question = try decoder.decode(Quiz.self, from: jsonData)
+        print(question)
+    }catch{
+        print(error)
+    }
+}
+
+////////////////
+struct Quiz: Codable {
+
+var quiz: Course
+
+}
+
+
+
+struct Course: Codable{
+
+var maths: Maths
+
+var sport: Sport
+
+}
+
+
+
+struct Sport: Codable {
+
+
+
+var q1: Questions
+
+}
+
+
+
+struct Maths: Codable {
+
+var q1: Questions
+
+var q2: Questions
+
+}
+
+
+
+struct Questions: Codable {
+
+var question: String
+
+var options: [String]
+
+var answer: String
+
+
+
+enum CodingKeys: String, CodingKey {
+
+case question
+
+case options
+
+case answer
+
+}
+
+init(from decoder: Decoder) throws {
+
+let values = try decoder.container(keyedBy: CodingKeys.self)
+
+self.question = try values.decode(String.self, forKey: .question)
+
+self.options = try values.decode([String].self, forKey: .options)
+
+self.answer = try values.decode(String.self, forKey: .answer)
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+let decoder = JSONDecoder()
+
+
+
+if let jsonData = myJson.data(using: .utf8){
+
+do{
+
+let question = try decoder.decode(Quiz.self, from: jsonData)
+
+print(question.quiz.sport.q1)
+
+print(question.quiz.maths.q1)
+
+print(question.quiz.maths.q2)
+
+}
+
+catch{
+
+print(error)
+
+}
+
+}
+
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{971, 3306}</string>
+			<key>OriginalContent</key>
+			<string>    }catch{
+        print(error)
+    }
+}
+</string>
+			<key>OriginalRange</key>
+			<string>{1659, 41}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
