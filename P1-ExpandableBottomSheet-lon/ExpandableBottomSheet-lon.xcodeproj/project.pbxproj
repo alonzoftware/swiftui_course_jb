@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A36A7232A0E92DE00BD92F4 /* DragState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A36A7222A0E92DE00BD92F4 /* DragState.swift */; };
+		9A36A7252A0E931300BD92F4 /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A36A7242A0E931300BD92F4 /* CourseDetailView.swift */; };
 		D0DB97B42A0D729000AF5B96 /* ExpandableBottomSheet_lonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB97B32A0D729000AF5B96 /* ExpandableBottomSheet_lonApp.swift */; };
 		D0DB97B62A0D729000AF5B96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB97B52A0D729000AF5B96 /* ContentView.swift */; };
 		D0DB97B82A0D729300AF5B96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DB97B72A0D729300AF5B96 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A36A7222A0E92DE00BD92F4 /* DragState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragState.swift; sourceTree = "<group>"; };
+		9A36A7242A0E931300BD92F4 /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
 		D0DB97B02A0D729000AF5B96 /* ExpandableBottomSheet-lon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ExpandableBottomSheet-lon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0DB97B32A0D729000AF5B96 /* ExpandableBottomSheet_lonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableBottomSheet_lonApp.swift; sourceTree = "<group>"; };
 		D0DB97B52A0D729000AF5B96 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 				D0DB97B72A0D729300AF5B96 /* Assets.xcassets */,
 				D0DB97B92A0D729300AF5B96 /* Preview Content */,
 				D0DB97C12A0D74BB00AF5B96 /* Course.swift */,
+				9A36A7222A0E92DE00BD92F4 /* DragState.swift */,
+				9A36A7242A0E931300BD92F4 /* CourseDetailView.swift */,
 			);
 			path = "ExpandableBottomSheet-lon";
 			sourceTree = "<group>";
@@ -140,7 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A36A7252A0E931300BD92F4 /* CourseDetailView.swift in Sources */,
 				D0DB97C22A0D74BB00AF5B96 /* Course.swift in Sources */,
+				9A36A7232A0E92DE00BD92F4 /* DragState.swift in Sources */,
 				D0DB97B62A0D729000AF5B96 /* ContentView.swift in Sources */,
 				D0DB97B42A0D729000AF5B96 /* ExpandableBottomSheet_lonApp.swift in Sources */,
 			);
