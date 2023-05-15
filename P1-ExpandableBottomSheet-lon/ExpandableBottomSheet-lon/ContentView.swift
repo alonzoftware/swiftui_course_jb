@@ -28,21 +28,21 @@ struct ContentView: View {
             .navigationBarTitle("Cursos Online")
             }
             .offset(y: self.showCourseDetail ? -150: 0)
-            .animation(.easeIn(duration: 0.25),value : self.showCourseDetail)
+            .animation(.easeIn(duration: 0.25),value : self.showCourseDetail )
             
-//            if showCourseDetail{
-//
-//                BlanketView(color: .gray)
-//                    .opacity(0.5)
-//                    .onTapGesture {
-//                        self.showCourseDetail = false
-//                    }
-//
-//                self.selectedCourse.map{
-//                    CourseDetailView(course: $0, isShown: $showCourseDetail)
-//                        .transition(.move(edge: .bottom))
-//                }
-//            }
+            if showCourseDetail{
+
+                BlanketView(color: .gray)
+                    .opacity(0.5)
+                    .onTapGesture {
+                        self.showCourseDetail = false
+                    }
+
+                self.selectedCourse.map{
+                    CourseDetailView(course: $0, isShown: $showCourseDetail)
+                        .transition(.move(edge: .bottom))
+                }
+            }
             
         }
         
