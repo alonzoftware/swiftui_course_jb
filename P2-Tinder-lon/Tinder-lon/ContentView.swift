@@ -125,7 +125,9 @@ struct ContentView_Previews: PreviewProvider {
         Group {
             ContentView()
             TopBarView().previewLayout(.sizeThatFits)
+//            BottomBarView().previewLayout(.sizeThatFits)
             BottomBarView().previewLayout(.fixed(width: 300, height: 100))
+            
         }
     }
 }
@@ -136,16 +138,16 @@ struct TopBarView: View {
         HStack{
             Image(systemName: "line.horizontal.3")
                 .font(.system(size: 25))
-                .foregroundColor(.black)
+                .foregroundColor(.white)
             Spacer()
             Image(systemName: "book.fill")
                 .font(.system(size: 35))
-                .foregroundColor(.black)
+                .foregroundColor(.white)
 
             Spacer()
             Image(systemName: "archivebox.fill")
                 .font(.system(size: 25))
-                .foregroundColor(.black)
+                .foregroundColor(.white)
 
             
         }.padding(15)
@@ -157,7 +159,7 @@ struct BottomBarView: View{
         HStack{
             Image(systemName: "xmark")
                 .font(.system(size: 25))
-                .foregroundColor(.black)
+                .foregroundColor(.white)
             Spacer()
             
             Button(action: {
@@ -165,9 +167,9 @@ struct BottomBarView: View{
             }, label: {
                 Text("Comprar el curso")
                 .bold()
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .padding(.all, 20)
-                .background(Color.black)
+                .background(Color.white)
                 .cornerRadius(12)
             })
             .padding(15)
@@ -175,7 +177,7 @@ struct BottomBarView: View{
             Spacer()
             Image(systemName: "heart")
                 .font(.system(size: 25))
-                .foregroundColor(.black)
+                .foregroundColor(.white)
         }.padding(15)
     }
 }

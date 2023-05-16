@@ -27,6 +27,7 @@ struct CardView: View, Identifiable {
                     .padding(.horizontal, 30)
                     .padding(.vertical, 20)
                     .background(Color.white)
+                    .foregroundColor(Color.black)
                 .cornerRadius(20)
             }.padding([.top, .horizontal], 50),
             alignment: .top
