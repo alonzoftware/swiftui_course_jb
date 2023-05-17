@@ -19,6 +19,10 @@ struct ContentView: View {
         
         var cards = [CardView]()
         
+//        for course in courses {
+//            cards.append(CardView(course: course))
+//        }
+        
         for idx in 0..<2{
             cards.append(CardView(course: courses[idx]))
         }
